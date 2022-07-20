@@ -4,9 +4,8 @@ import os
 Generiert ein auf dem Display darstellbares Bild aus dem generierten Latex string.
 """
 class LatexToImage:
-    def __init__(self):
-        self.filepath = "conversion_file"
-        self.quality = 1000
+    filepath = "conversion_file"
+    quality = 1000
     
     # schreibt den string in ein Latex file
     def write_to_latex_file(self, tex_string):
@@ -37,5 +36,5 @@ class LatexToImage:
 
 if __name__ == "__main__":
     tex2png = LatexToImage()
-    tex2png.write_to_latex_file("\\alpha \\beta")
+    tex2png.write_to_latex_file("\\alpha \\gamma")
     tex2png.convert()

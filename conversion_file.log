@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Arch Linux) (preloaded format=pdflatex 2022.5.26)  18 JUL 2022 00:30
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Arch Linux) (preloaded format=pdflatex 2022.5.26)  20 JUL 2022 13:56
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -151,7 +151,7 @@ Here is how much of TeX's memory you used:
  55i,5n,71p,227b,106s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/
 cmmi10.pfb>
-Output written on conversion_file.pdf (1 page, 9368 bytes).
+Output written on conversion_file.pdf (1 page, 9261 bytes).
 PDF statistics:
  13 PDF objects out of 1000 (max. 8388607)
  7 compressed objects within 1 object stream
