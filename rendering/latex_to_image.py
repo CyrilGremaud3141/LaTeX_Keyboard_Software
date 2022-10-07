@@ -1,5 +1,4 @@
 import os
-
 """
 Generiert ein auf dem Display darstellbares Bild aus dem generierten Latex string.
 """
@@ -20,7 +19,7 @@ class LatexToImage:
     # erstellt ein Bild aus dem Latex file
     def convert(self):
         # fuehrt einen Terminal Befehl aug um ein Pdf aus dem Tex file zu erstellen
-        os.system(f"pdflatex {self.filepath}.tex")
+        os.system(f"pdflatex -interaction=batchmode {self.filepath}.tex")
         # erstellt mit einem Terminal Befehl ein Bild aus dem Pdf
         os.system(f"pdftoppm {self.filepath}.pdf {self.filepath} -png -r {self.quality}")
 
@@ -36,5 +35,5 @@ class LatexToImage:
 
 if __name__ == "__main__":
     tex2png = LatexToImage()
-    tex2png.write_to_latex_file("\\alpha \\gamma")
-    tex2png.convert()
+    for i in range(100):
+        tex2png.make_image("\\alpha \\gamma")
