@@ -1,5 +1,7 @@
 from text import TextBlock
 
+# sets up the Elements with the corresponding tex-strings
+
 class Alpha(TextBlock):
     def __init__(self):
         super().__init__()

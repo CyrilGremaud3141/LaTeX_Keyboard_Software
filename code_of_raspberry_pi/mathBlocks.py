@@ -1,5 +1,7 @@
 from block import Block
 
+# sets up the Elements with the corresponding tex-strings
+
 class BraceBlock(Block):
     def __init__(self):
         super().__init__()

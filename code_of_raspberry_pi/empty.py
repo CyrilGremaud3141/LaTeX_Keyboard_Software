@@ -1,9 +1,12 @@
+# combines the Tex-strings of the subelements
 class EmptyBlock:
+    # sets up some variables
     def __init__(self):
         self.cursor = 0
         self.content = []
         self.is_block = True
 
+    # adds an element at the position of the cursor
     def add_element(self, element):
         if self.cursor == len(self.content):
             self.content.append(element)
@@ -11,6 +14,7 @@ class EmptyBlock:
             if self.content[self.cursor].add_element(element):
                 self.content[self.cursor] = element
 
+    # deletes the element at the position of the cursor
     def delete(self):
         if len(self.content) > 0:
             if self.cursor == len(self.content):
@@ -20,6 +24,7 @@ class EmptyBlock:
                 if self.content[self.cursor].delete():
                     self.content.pop(self.cursor)
 
+    # moves left in the editor
     def left(self):
         # if this block has no subelements, move in parent object
         if len(self.content) == 0:
@@ -35,6 +40,7 @@ class EmptyBlock:
                     return True
         return False
 
+    # moves right in the editor
     def right(self):
         if self.cursor < len(self.content):
             if self.content[self.cursor].right():
@@ -43,6 +49,7 @@ class EmptyBlock:
             return True
         return False
 
+    # returnes the combined Tex-strings of all the subelements
     def get_tex_string(self, cursor):
         tex_string = r""
         cursor_used = False
@@ -66,6 +73,7 @@ class EmptyBlock:
 
         return tex_string, cursor_used
     
+    # returns the active element
     def get_active_element(self):
         if self.cursor == len(self.content):
             return None

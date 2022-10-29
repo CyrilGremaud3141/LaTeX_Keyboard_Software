@@ -1,6 +1,8 @@
 from text import TextBlock
 from block import Block
 
+# sets up the Elements with the corresponding tex-strings
+
 class OpenParenthesis(TextBlock):
     def __init__(self):
         super().__init__()

@@ -1,6 +1,7 @@
 import time
 import serial
 
+# sends a string over Uart to the seeed
 ser = serial.Serial("/dev/ttyAMA0", baudrate = 9600, parity=serial.PARITY_ODD, timeout=1)
 def write_to_computer(text):
     counter = 0

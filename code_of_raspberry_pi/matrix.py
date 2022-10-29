@@ -1,4 +1,7 @@
 from empty import EmptyBlock
+
+# like a block element bot can change its size
+
 class Matrix:
     def __init__(self):
         self.cursor = 0
